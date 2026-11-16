@@ -1,0 +1,223 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مدیریت مغازه آرایشی</title>
+<meta name="theme-color" content="#a8325e"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<style>
+:root{--bg:#f7f1f4;--card:#fff;--ink:#2a1a2e;--mut:#7d6a82;--ac:#a8325e;--acs:#f3dbe5;--warn:#b7791f;--ln:#e8dce2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c121f;--card:#2a1b2e;--ink:#f4e9f0;--mut:#b09ab5;--ac:#c2487a;--acs:#43263a;--warn:#e3b04b;--ln:#3b2a40;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c121f;--card:#2a1b2e;--ink:#f4e9f0;--mut:#b09ab5;--ac:#c2487a;--acs:#43263a;--warn:#e3b04b;--ln:#3b2a40;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}button,input,select{font:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:var(--fs,15px)/1.7 var(--ff,Vazirmatn,Tahoma,sans-serif)}
+header{padding:14px 16px 0}h1{margin:0;font-size:22px;font-weight:800}
+main{padding:6px 16px 90px}
+nav{position:fixed;inset:auto 0 0;display:flex;background:var(--card);border-top:1px solid var(--ln);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+nav button{flex:1;padding:13px 0;border:0;border-top:3px solid transparent;background:none;color:var(--mut);font-weight:600}
+nav .on{color:var(--ac);border-top-color:var(--ac)}
+h4{margin:20px 0 4px;font-size:15px}.mu{color:var(--mut);margin:6px 0}.w{color:var(--warn)}
+.r{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:10px 12px;margin:6px 0}
+.r>span,.r .g{flex:1}.g small{display:block;color:var(--mut);font-size:12.5px}
+.sw{width:30px;height:30px;border-radius:50% 50% 50% 8px;flex:none}
+.st{display:flex;align-items:center;gap:8px}.st button{width:34px;height:34px;border-radius:50%;border:1px solid var(--ln);background:var(--bg);color:var(--ink);font-size:18px}
+.hero{background:var(--ac);color:#fff;border-radius:20px;padding:18px;margin:10px 0}.hero small{display:block;opacity:.85}.hero>b{font-size:36px;font-weight:800}
+.hero .sub{display:flex;gap:30px;margin-top:12px;border-top:1px solid #fff5;padding-top:10px}
+.chips{display:flex;gap:8px;margin-top:8px}.chips button{padding:5px 14px;border-radius:99px;border:1px solid var(--ln);background:var(--card);color:var(--ink)}.chips .on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.bars{display:flex;gap:8px;align-items:flex-end;height:110px;margin-bottom:24px}
+.bars i{flex:1;background:var(--acs);border-top:3px solid var(--ac);border-radius:6px 6px 0 0;position:relative}
+.bars em{position:absolute;bottom:-22px;width:100%;text-align:center;font-style:normal;font-size:12px;color:var(--mut)}
+input,select{width:100%;padding:10px 12px;border:1px solid var(--ln);border-radius:10px;background:var(--card);color:var(--ink)}
+input[type=checkbox]{width:auto}
+textarea{width:100%;padding:10px;border:1px solid var(--ln);border-radius:10px;background:var(--card);color:var(--ink);font-size:12px;direction:ltr}
+label{display:block;font-size:13px;color:var(--mut);margin:8px 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+.g3{display:grid;grid-template-columns:2.2fr 1fr 1.6fr;gap:6px;margin:6px 0}
+.pri{width:100%;padding:12px;border:0;border-radius:12px;background:var(--ac);color:#fff;font-weight:600;margin-top:10px}
+.gh{width:100%;padding:12px;border:0;background:none;color:var(--warn);margin-top:4px}
+.bar{position:sticky;bottom:calc(56px + env(safe-area-inset-bottom,0px));background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:10px;margin-top:14px;box-shadow:0 -4px 16px #0002}
+.bar .row{display:flex;gap:8px;align-items:center;margin:4px 0}.bar .row select{flex:1}.bar #dc{width:100px}.bar .row label{margin:0;flex:1}
+.bar .pri{width:auto;margin:0;padding:9px 18px}.bar b{font-size:16px}
+#sh{position:fixed;inset:0;z-index:20;display:flex;align-items:flex-end}#sh[hidden]{display:none}
+.bk{position:absolute;inset:0;background:#0007}
+.pn{position:relative;width:100%;max-height:85%;overflow:auto;background:var(--bg);border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.pn h3{margin:0 0 6px}
+.doc{background:#fff;color:#222;border-radius:12px;padding:16px;margin:8px 0;font-size:13px;line-height:1.8}
+.doc h2{margin:0;font-size:18px}.doc table{width:100%;border-collapse:collapse;margin:10px 0}.doc th,.doc td{border-bottom:1px solid #ddd;padding:4px 2px;text-align:right}.doc th{background:#f3f3f3}.doc .tt{display:flex;justify-content:space-between;font-weight:700;padding:3px 0}.doc .mt{color:#666;font-size:12px}
+@media print{body>*:not(#sh){display:none!important}#sh{position:static}.bk,.noprint{display:none!important}.pn{max-height:none;padding:0;background:#fff}}
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script></head><body>
+<header style="display:flex;justify-content:space-between;align-items:center"><h1 id="t"></h1><div><button class="gh" style="width:auto;margin:0;padding:6px 10px;color:var(--ac)" onclick="stg()">تنظیمات</button><button class="gh" style="width:auto;margin:0;padding:6px 10px;color:var(--ac)" onclick="bk()">پشتیبان</button></div></header><main id="v"></main>
+<nav><button data-t="home" onclick="go('home')">گزارش</button><button data-t="sale" onclick="go('sale')">فروش</button><button data-t="prod" onclick="go('prod')">کالاها</button><button data-t="cust" onclick="go('cust')">مشتریان</button><button data-t="docs" onclick="go('docs')">فاکتورها</button></nav>
+<div id="sh" hidden></div>
+<script>
+const $=s=>document.querySelector(s);
+const fa=n=>Math.round(n||0).toLocaleString('fa-IR');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const num=v=>+String(v||0).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[^\d.]/g,'')||0;
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+const hue=s=>(330+[...s].reduce((a,c)=>a+c.charCodeAt(0)*7,0)%60)%360;
+let S,tab='home',per=7,cart={},q='';
+
+try{S=JSON.parse(localStorage.getItem('blank1'))}catch(e){}
+function fromSheet(){return{products:[],customers:[],sales:[],rev0:0,prof0:0}}
+if(!S||!S.products)S=fromSheet();
+const save=()=>{try{localStorage.setItem('blank1',JSON.stringify(S))}catch(e){}};
+function fromSheet2(){return{customers:[],cash0:{in:0,inst:0,buy:0}}}
+if(!S.cash0){const x=fromSheet2();S.customers=S.customers.filter(c=>c.name!='مشتری نمونه').concat(x.customers);S.cash0=x.cash0;save()}
+const P=id=>S.products.find(x=>x.id==id),C=id=>S.customers.find(x=>x.id==id);
+function go(t){tab=t;render()}
+function render(){$('#t').textContent={home:'گزارش فروش',sale:'فروش جدید',prod:'کالاها',cust:'مشتریان',docs:'فاکتورها و اسناد'}[tab];
+$('#v').innerHTML={home:vHome,sale:vSale,prod:vProd,cust:vCust,docs:vDocs}[tab]();
+document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==tab));
+if(tab=='sale')drawL();window.scrollTo(0,0)}
+function sheet(h){$('#sh').innerHTML='<div class="bk" onclick="closeS()"></div><div class="pn">'+h+'</div>';$('#sh').hidden=false}
+function closeS(){$('#sh').hidden=true}
+
+function vHome(){const from=new Date();from.setHours(0,0,0,0);from.setDate(from.getDate()-(per-1));
+const ss=S.sales.filter(s=>s.t>=from.getTime());
+const rev=ss.reduce((a,s)=>a+s.total,0),prof=ss.reduce((a,s)=>a+s.total-s.items.reduce((b,x)=>b+x.qty*x.cost,0),0);
+const top={};ss.forEach(s=>s.items.forEach(x=>top[x.name]=(top[x.name]||0)+x.qty));
+const tl=Object.entries(top).sort((a,b)=>b[1]-a[1]).slice(0,5),low=S.products.filter(p=>p.stock<=p.min);
+const days=[...Array(7)].map((_,i)=>{const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-6+i);const a=d.getTime(),e=a+864e5;return{d,v:S.sales.filter(s=>s.t>=a&&s.t<e).reduce((x,s)=>x+s.total,0)}});
+const mx=Math.max(1,...days.map(x=>x.v));
+return `<p class="mu" style="margin:6px 0 0;font-size:12px">آخرین پشتیبان‌گیری: ${stp(S.lastBk)}</p><div class="chips">${[[1,'امروز'],[7,'۷ روز'],[30,'۳۰ روز']].map(([n,l])=>`<button class="${per==n?'on':''}" onclick="per=${n};render()">${l}</button>`).join('')}</div>
+<div class="hero"><small>جمع فروش (تومان)</small><b>${fa(rev)}</b><div class="sub"><div>سود<br><b>${fa(prof)}</b></div><div>تعداد فاکتور<br><b>${fa(ss.length)}</b></div></div></div>
+${cashT()}${allT()}<h4>فروش ۷ روز اخیر</h4><div class="bars">${days.map(x=>`<i style="height:${Math.max(4,x.v/mx*100)}%"><em>${x.d.toLocaleDateString('fa-IR',{weekday:'narrow'})}</em></i>`).join('')}</div>
+<h4>موجودی کم</h4>${low.length?low.map(p=>`<div class="r" onclick="pForm('${p.id}')"><span>${esc(p.name)}</span><b class="w">${fa(p.stock)} عدد</b></div>`).join(''):'<p class="mu">همه کالاها موجودی کافی دارند.</p>'}
+<h4>پرفروش‌ها</h4>${tl.length?tl.map(([n,c])=>`<div class="r"><span>${esc(n)}</span><b>${fa(c)} عدد</b></div>`).join(''):'<p class="mu">هنوز فروشی ثبت نشده. از تب فروش شروع کنید.</p>'}`}
+
+function allT(){const A=f=>S.products.reduce((a,p)=>a+f(p),0),sd={};S.sales.forEach(s=>s.items.forEach(x=>sd[x.id]=(sd[x.id]||0)+x.qty));
+const sp=S.sales.reduce((a,s)=>a+s.total-s.items.reduce((b,x)=>b+x.qty*x.cost,0),0),rev=(S.rev0||0)+S.sales.reduce((a,s)=>a+s.total,0),cap=A(p=>p.stock*p.buy),val=A(p=>p.stock*p.sell);
+const sold=p=>(p.sold0||0)+(sd[p.id]||0),top=S.products.filter(sold).sort((a,b)=>sold(b)-sold(a)).slice(0,5),dead=S.products.filter(p=>p.stock>0&&!sold(p));
+return `<h4>وضعیت کل مغازه از ابتدا (شامل اکسل)</h4>${[['کل فروش',rev],['کل سود فروش',(S.prof0||0)+sp],['سرمایه در موجودی (به قیمت خرید)',cap],['ارزش موجودی (به قیمت فروش)',val],['سود باقی‌مانده در موجودی',val-cap]].map(([l,v])=>`<div class="r"><span>${l}</span><b>${fa(v)}</b></div>`).join('')}<div class="r"><div class="g">فروش‌نرفته: ${fa(dead.length)} کالا<small>سرمایه گیرکرده در آن‌ها</small></div><b class="w">${fa(dead.reduce((a,p)=>a+p.stock*p.buy,0))}</b></div><h4>پرفروش‌ترین‌ها از ابتدا</h4>${top.map(p=>`<div class="r"><span>${esc(p.name)}</span><b>${fa(sold(p))} عدد</b></div>`).join('')}`}
+function vSale(){return `<input id="q" placeholder="جستجوی کالا" oninput="q=this.value;drawL()" value="${esc(q)}"><div id="pl"></div>
+
+<div class="bar"><div class="row"><select id="cs"><option value="">بدون مشتری</option>${S.customers.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select><input id="dc" inputmode="numeric" placeholder="تخفیف"></div><div class="row"><input id="pd" inputmode="numeric" placeholder="پرداختی (خالی = پرداخت کامل)"></div>
+<div class="row"><span style="flex:1"></span><b id="tot"></b><button class="gh" style="width:auto;margin:0;padding:9px 12px" onclick="pfMake()">پیش‌فاکتور</button><button class="pri" onclick="checkout()">ثبت فروش</button></div></div>`}
+function drawL(){$('#pl').innerHTML=S.products.filter(p=>(p.name+p.cat).includes(q)).map(p=>`<div class="r"><i class="sw" style="background:hsl(${hue(p.name)},60%,52%)"></i><div class="g"><b>${esc(p.name)}</b><small>${fa(p.sell)} تومان – موجودی ${fa(p.stock)}</small></div><div class="st"><button onclick="ch('${p.id}',-1)">−</button><span>${fa(cart[p.id]||0)}</span><button onclick="ch('${p.id}',1)">+</button></div></div>`).join('')||'<p class="mu">کالایی پیدا نشد.</p>';
+$('#tot').textContent=fa(Object.entries(cart).reduce((a,[id,n])=>a+n*(P(id)?P(id).sell:0),0))+' تومان'}
+function ch(id,d){const n=(cart[id]||0)+d;if(n<0||n>P(id).stock)return;cart[id]=n;drawL()}
+function checkout(){const it=Object.entries(cart).filter(([,n])=>n>0).map(([id,n])=>{const p=P(id);return{id,name:p.name,qty:n,price:p.sell,cost:p.buy}});
+if(!it.length)return;
+const sub=it.reduce((a,x)=>a+x.qty*x.price,0),c=C($('#cs').value);let d=Math.min(sub,num($('#dc').value));
+
+const total=sub-d;it.forEach(x=>P(x.id).stock-=x.qty);
+let pd=total;if(c&&$('#pd').value.trim()!==''){pd=Math.max(0,Math.min(total,num($('#pd').value)))}
+if(c){c.spent+=total;c.paid=(c.paid||0)+pd;c.debt=(c.debt||0)+total-pd}
+const s={id:uid(),t:Date.now(),items:it,disc:d,total,paid:pd,no:'F-'+(S.nf=(S.nf||1000)+1),cid:c?c.id:'',cn:c?c.name:''};S.sales.unshift(s);cart={};save();render();inv(s.id)}
+function sDoc(s){return{sid:s.id,type:'inv',no:s.no||'—',t:s.t,cid:s.cid,cn:s.cn,items:s.items,disc:s.disc,total:s.total,paid:s.paid}}
+function docHTML(d){const pro=d.type=='pro',sub=d.items.reduce((a,x)=>a+x.qty*x.price,0),c=C(d.cid),pd=d.paid==null?d.total:d.paid;
+return `<div class="doc" id="dc1"><h2>${esc(ST.sn||'مغازه آرایشی')}</h2><div class="mt">${esc(ST.sp||'')}</div><div class="tt" style="margin-top:8px"><span>${pro?'پیش‌فاکتور':d.type=='dbt'?'صورت‌حساب بدهی':'فاکتور فروش'} شماره ${esc(d.no)}</span><span>${new Date(d.t).toLocaleDateString('fa-IR')}</span></div><div>مشتری: ${esc(d.cn||'—')}${c&&c.phone?' – '+esc(c.phone):''}</div><table><tr><th>کالا</th><th>تعداد</th><th>قیمت</th><th>جمع</th></tr>${d.items.map(x=>`<tr><td>${esc(x.name)}</td><td>${fa(x.qty)}</td><td>${fa(x.price)}</td><td>${fa(x.qty*x.price)}</td></tr>`).join('')}</table>${d.disc?`<div class="tt"><span>جمع اقلام</span><span>${fa(sub)}</span></div><div class="tt"><span>تخفیف</span><span>${fa(d.disc)}</span></div>`:''}<div class="tt"><span>${d.type=='dbt'?'مانده بدهی':'مبلغ قابل پرداخت'} (تومان)</span><span>${fa(d.total)}</span></div>${!pro&&pd<d.total?`<div class="tt"><span>پرداخت‌شده</span><span>${fa(pd)}</span></div><div class="tt"><span>مانده</span><span>${fa(d.total-pd)}</span></div>`:''}${d.note?`<div class="mt">${esc(d.note)}</div>`:''}${pro?'<div class="mt">این پیش‌فاکتور فقط جهت اطلاع است و فاکتور نهایی نیست.</div>':''}</div>`}
+let CD;function docView(d){CD=d;sheet(`<h3>${d.type=='pro'?'پیش‌فاکتور':'فاکتور'}</h3>${docHTML(d)}<div class="noprint"><button class="pri" onclick="docPdf(0)">دانلود PDF</button><button class="pri" onclick="docPdf(1)">ارسال برای مشتری</button><button class="gh" onclick="window.print()">چاپ</button><button class="gh" onclick="docEdit()">ویرایش این سند</button><button class="gh" onclick="delAsk()">حذف این سند</button><button class="gh" onclick="closeS()">بستن</button><div id="dx"></div><p class="mu" id="dm"></p></div>`)}
+async function docPdf(sh){const m=$('#dm');m.textContent='در حال ساخت PDF…';
+try{const cv=await html2canvas($('#dc1'),{scale:2,backgroundColor:'#ffffff'}),{jsPDF}=window.jspdf,pdf=new jsPDF({unit:'mm',format:'a4'}),w=190,h=cv.height*w/cv.width,k=h>277?277/h:1;
+pdf.addImage(cv.toDataURL('image/jpeg',.92),'JPEG',(210-w*k)/2,10,w*k,h*k);
+const blob=pdf.output('blob'),nm=(CD.type=='pro'?'proforma-':'invoice-')+CD.no+'.pdf';
+if(sh){const f=new File([blob],nm,{type:'application/pdf'});if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:nm});m.textContent='';return}}
+const d=window.claude&&await claude.use('downloads');
+if(d){await d.save({filename:nm,data:blob});m.textContent='ذخیره شد'}else{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=nm;document.body.appendChild(a);a.click();a.remove();m.textContent='PDF ساخته شد'}}
+catch(e){m.textContent=(e&&(e.code=='declined'||e.name=='AbortError'))?'':'ساخت PDF ناموفق بود؛ اینترنت لازم است. دکمه چاپ را امتحان کنید.'}}
+function pfMake(){const it=Object.entries(cart).filter(([,n])=>n>0).map(([id,n])=>{const p=P(id);return{name:p.name,qty:n,price:p.sell}});if(!it.length)return;
+const sub=it.reduce((a,x)=>a+x.qty*x.price,0),c=C($('#cs').value),d=Math.min(sub,num($('#dc').value)),o={id:uid(),t:Date.now(),type:'pro',no:'P-'+(S.np=(S.np||1000)+1),cid:c?c.id:'',cn:c?c.name:'',items:it,disc:d,total:sub-d};
+(S.pf=S.pf||[]).unshift(o);save();docView(o)}
+function pfList(){return (S.pf||[]).length?`<h4>پیش‌فاکتورهای اخیر</h4>`+S.pf.slice(0,10).map(o=>`<div class="r" onclick="docView(S.pf.find(x=>x.id=='${o.id}'))"><span>${esc(o.no)} – ${esc(o.cn||'بدون مشتری')}</span><b>${fa(o.total)}</b></div>`).join(''):''}
+function inv(id){const s=S.sales.find(x=>x.id==id);docView(sDoc(s));return;
+sheet(`<h3>فاکتور</h3><p class="mu">${new Date(s.t).toLocaleString('fa-IR')}${s.cn?' – '+esc(s.cn):''}</p>${s.items.map(x=>`<div class="r"><span>${esc(x.name)} × ${fa(x.qty)}</span><b>${fa(x.qty*x.price)}</b></div>`).join('')}${s.disc?`<div class="r"><span>تخفیف</span><b>${fa(s.disc)}</b></div>`:''}<div class="r"><span>جمع کل</span><b>${fa(s.total)} تومان</b></div><button class="pri" onclick="closeS()">بستن</button>`)}
+
+let pq='';
+function vProd(){return `<button class="pri" onclick="pForm()">کالای جدید</button><input id="pq" placeholder="جستجوی کالا" oninput="pq=this.value;drawP()" value="${esc(pq)}" style="margin-top:8px"><div id="prl">${pList()}</div>`}
+function drawP(){$('#prl').innerHTML=pList()}
+function pList(){const sd={},n=s=>String(s||'').replace(/ي/g,'ی').replace(/ك/g,'ک').toLowerCase();S.sales.forEach(s=>s.items.forEach(x=>sd[x.id]=(sd[x.id]||0)+x.qty));return S.products.filter(p=>n(p.name+' '+p.cat).includes(n(pq).trim())).map(p=>`<div class="r" onclick="pForm('${p.id}')"><i class="sw" style="background:hsl(${hue(p.name)},60%,52%)"></i><div class="g"><b>${esc(p.name)}</b><small>خرید ${fa(p.buy)} / فروش ${fa(p.sell)} – سود هر عدد ${fa(p.sell-p.buy)}<br>فروخته‌شده ${fa((p.sold0||0)+(sd[p.id]||0))} – ارزش موجودی ${fa(p.stock*p.sell)}</small></div><b class="${p.stock<=p.min?'w':''}">${fa(p.stock)}</b></div>`).join('')||'<p class="mu">کالایی پیدا نشد.</p>'}
+function pForm(id){const p=P(id)||{name:'',cat:'',buy:'',sell:'',stock:'',min:3};
+sheet(`<h3>${id?'ویرایش کالا':'کالای جدید'}</h3><label>نام کالا<input id="f1" value="${esc(p.name)}"></label><label>دسته‌بندی<input id="f2" value="${esc(p.cat)}"></label>
+<div class="g2"><label>قیمت خرید<input id="f3" inputmode="numeric" value="${p.buy}"></label><label>قیمت فروش<input id="f4" inputmode="numeric" value="${p.sell}"></label><label>موجودی<input id="f5" inputmode="numeric" value="${p.stock}"></label><label>هشدار موجودی کم<input id="f6" inputmode="numeric" value="${p.min}"></label></div>
+<button class="pri" onclick="pSave('${id||''}')">ذخیره</button>`+(id?`<button class="gh" onclick="rForm('${id}')">ثبت ورود کالا (خرید جدید)</button><button class="gh" onclick="pDel('${id}')">حذف کالا</button>`:''))}
+function pSave(id){const n=$('#f1').value.trim();if(!n)return;const o={name:n,cat:$('#f2').value.trim(),buy:num($('#f3').value),sell:num($('#f4').value),stock:num($('#f5').value),min:num($('#f6').value)};
+if(id)Object.assign(P(id),o);else S.products.push({id:uid(),...o,bought:o.stock,sold0:0});save();closeS();render()}
+function rForm(id){const p=P(id);sheet(`<h3>ورود کالا – ${esc(p.name)}</h3><p class="mu">موجودی فعلی: ${fa(p.stock)} عدد – قیمت خرید فعلی: ${fa(p.buy)}</p><div class="g2"><label>تعداد خریداری‌شده<input id="f1" inputmode="numeric"></label><label>قیمت خرید هر عدد<input id="f2" inputmode="numeric" value="${p.buy}"></label></div><button class="pri" onclick="rSave('${id}')">ثبت ورود</button>`)}
+function rSave(id){const p=P(id),n=num($('#f1').value),b=num($('#f2').value);if(!n)return;if(b)p.buy=Math.round((p.stock*p.buy+n*b)/(p.stock+n));p.stock+=n;p.bought=(p.bought||0)+n;save();closeS();render()}
+function pDel(id){S.products=S.products.filter(x=>x.id!=id);delete cart[id];save();closeS();render()}
+
+function vCust(){const db=S.customers.reduce((a,c)=>a+(c.debt||0),0);return `<button class="pri" onclick="cForm()">مشتری جدید</button><div class="r"><span>جمع بدهی مشتریان</span><b class="w">${fa(db)}</b></div>`+S.customers.map(c=>`<div class="r" onclick="cForm('${c.id}')"><div class="g"><b>${esc(c.name)}</b><small>${c.phone?esc(c.phone)+' – ':''}خرید کل ${fa(c.spent)} – پرداخت‌شده ${fa(c.paid||0)}</small></div>${c.debt>0?`<b class="w">بدهی ${fa(c.debt)}</b>`:''}</div>`).join('')}
+function cForm(id){const c=C(id)||{name:'',phone:''};
+sheet(`<h3>${id?'ویرایش مشتری':'مشتری جدید'}</h3><label>نام<input id="f1" value="${esc(c.name)}"></label><label>شماره موبایل<input id="f2" inputmode="tel" value="${esc(c.phone)}"></label><button class="pri" onclick="cSave('${id||''}')">ذخیره</button>`+(id?`<button class="gh" onclick="mForm('${id}')">ساخت فاکتور یا سند دستی</button>${C(id).debt>0?`<button class="gh" onclick="dbtDoc('${id}')">صورت‌حساب بدهی (PDF)</button>`:''}<button class="gh" onclick="buyForm('${id}')">ثبت خرید جدید</button><button class="gh" onclick="loanForm('${id}')">ثبت قرض نقدی</button>${C(id).debt>0?`<button class="gh" onclick="payForm('${id}')">ثبت پرداخت بدهی</button>`:''}<button class="gh" onclick="cDel('${id}')">حذف مشتری</button>${hist(id)}`:''))}
+function cSave(id){const n=$('#f1').value.trim();if(!n)return;const o={name:n,phone:$('#f2').value.trim()};
+if(id)Object.assign(C(id),o);else S.customers.push({id:uid(),...o,paid:0,debt:0,spent:0});save();closeS();render()}
+function loanForm(id){const c=C(id);sheet(`<h3>قرض نقدی – ${esc(c.name)}</h3><p class="mu">مبلغی که نقد از صندوق به مشتری داده شده. به بدهی او اضافه و از مانده صندوق کم می‌شود.</p><div class="g2"><label>مبلغ<input id="f1" inputmode="numeric"></label><label>توضیح (اختیاری)<input id="f2"></label></div><button class="pri" onclick="loanSave('${id}')">ثبت قرض</button>`)}
+function loanSave(id){const c=C(id),a=num($('#f1').value);if(!a)return;c.debt=(c.debt||0)+a;(S.loans=S.loans||[]).push({t:Date.now(),cid:id,amt:a,note:$('#f2').value.trim()});save();closeS();render()}
+let ST={th:'sys',ff:0,fs:15,ac:0};
+try{Object.assign(ST,JSON.parse(localStorage.getItem('blank_set')))}catch(e){}
+const FF=[['وزیرمتن','Vazirmatn,Tahoma,sans-serif'],['تاهوما','Tahoma,sans-serif'],['نسخ (سریف)','"Noto Naskh Arabic","Droid Naskh",serif'],['فونت گوشی','system-ui,sans-serif']],AC=[['بری','#a8325e','#c2487a'],['بنفش','#7b3fa0','#9a63c4'],['سبز','#0f766e','#2a9d8f'],['آبی','#2457b5','#4f82dd']];
+function applyST(){const r=document.documentElement,dk=ST.th=='dark'||(ST.th=='sys'&&matchMedia('(prefers-color-scheme: dark)').matches);
+ST.th=='sys'?r.removeAttribute('data-theme'):r.setAttribute('data-theme',ST.th);
+r.style.setProperty('--ff',(FF[ST.ff]||FF[0])[1]);r.style.setProperty('--fs',ST.fs+'px');
+if(ST.ac&&AC[ST.ac]){r.style.setProperty('--ac',AC[ST.ac][dk?2:1]);r.style.setProperty('--acs','color-mix(in srgb,var(--ac) 18%,var(--card))')}else{r.style.removeProperty('--ac');r.style.removeProperty('--acs')}
+try{localStorage.setItem('blank_set',JSON.stringify(ST))}catch(e){}}
+applyST();try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyST)}catch(e){}
+function stg(){const o=(a,c,f)=>a.map((x,i)=>`<button class="${i==c?'on':''}" onclick="${f}(${i})">${x}</button>`).join('');
+sheet(`<h3>تنظیمات</h3><h4>تم</h4><div class="chips">${o(['خودکار','روشن','تیره'],['sys','light','dark'].indexOf(ST.th),'sT')}</div><h4>رنگ برنامه</h4><div class="chips">${o(AC.map(x=>x[0]),ST.ac,'sA')}</div><h4>فونت</h4><div class="chips" style="flex-wrap:wrap">${o(FF.map(x=>x[0]),ST.ff,'sF')}</div><h4>مشخصات روی فاکتور</h4><label>نام مغازه<input value="${esc(ST.sn||'')}" oninput="ST.sn=this.value;applyST()"></label><label>تلفن مغازه<input inputmode="tel" value="${esc(ST.sp||'')}" oninput="ST.sp=this.value;applyST()"></label><h4>اندازه نوشته</h4><div class="chips">${o(['کوچک','متوسط','بزرگ'],[14,15,17].indexOf(ST.fs),'sS')}</div><button class="pri" onclick="closeS()">بستن</button>`)}
+function sT(i){ST.th=['sys','light','dark'][i];applyST();stg()}
+function sA(i){ST.ac=i;applyST();stg()}
+function sF(i){ST.ff=i;applyST();stg()}
+function sS(i){ST.fs=[14,15,17][i];applyST();stg()}
+function OS(){const t=((navigator.userAgentData&&navigator.userAgentData.platform)||'')+' '+navigator.userAgent;return /Android/i.test(t)?'اندروید':/iPhone|iPad|iPod/i.test(t)?'iOS':/Windows/i.test(t)?'ویندوز':/Mac/i.test(t)?'مک':/CrOS|Chrome OS/i.test(t)?'کروم‌اواس':/Linux/i.test(t)?'لینوکس':'نامشخص'}
+const stp=o=>o?new Date(o.t).toLocaleString('fa-IR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})+' – '+o.os:'—';
+function bk(){sheet(`<h3>پشتیبان‌گیری و بازیابی</h3><p class="mu" id="lb">آخرین پشتیبان‌گیری: ${stp(S.lastBk)}</p><p class="mu">برای انتقال به دستگاه دیگر، متن زیر را کپی کنید و آنجا در کادر بازیابی بچسبانید.</p><textarea id="bt" readonly rows="5" onclick="this.select()">${esc(JSON.stringify(S))}</textarea><button class="pri" onclick="cpB()">کپی پشتیبان</button><button class="gh" onclick="dlB()">ذخیره به‌صورت فایل</button><p class="mu" id="cm"></p><h4>بازیابی</h4><p class="mu">با بازیابی، اطلاعات فعلی این دستگاه با پشتیبان جایگزین می‌شود.</p><label>انتخاب فایل پشتیبان (بازیابی فوری)<input type="file" accept=".json,.txt" onchange="flB(this)"></label><textarea id="rt" rows="4" placeholder="یا متن پشتیبان را اینجا بچسبانید"></textarea><button class="pri" onclick="rsB()">بازیابی اطلاعات</button><p class="w" id="rm"></p>`)}
+async function dlB(){S.lastBk={t:Date.now(),os:OS()};save();if($('#lb'))$('#lb').textContent='آخرین پشتیبان‌گیری: '+stp(S.lastBk);const t=JSON.stringify(S),n='backup-'+new Date().toISOString().slice(0,10)+'.json';
+try{const d=window.claude&&await claude.use('downloads');if(d){await d.save({filename:n,data:t});return}}catch(e){if(e&&e.code=='declined')return}
+const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'application/json'}));a.download=n;document.body.appendChild(a);a.click();a.remove()}
+function flB(i){const f=i.files[0];if(!f)return;f.text().then(t=>{$('#rt').value=t;rsB()})}
+function cpB(){S.lastBk={t:Date.now(),os:OS()};save();$('#bt').value=JSON.stringify(S);if($('#lb'))$('#lb').textContent='آخرین پشتیبان‌گیری: '+stp(S.lastBk);const t=$('#bt');t.select();let ok=false;try{ok=document.execCommand('copy')}catch(e){}if(!ok&&navigator.clipboard)navigator.clipboard.writeText(t.value).then(()=>{$('#cm').textContent='کپی شد'}).catch(()=>{});$('#cm').textContent=ok?'کپی شد':'متن انتخاب شد؛ آن را کپی کنید'}
+function rsB(){let d;try{d=JSON.parse($('#rt').value.trim())}catch(e){}if(!d||!Array.isArray(d.products)||!Array.isArray(d.customers)||!Array.isArray(d.sales)){$('#rm').textContent='متن پشتیبان معتبر نیست.';return}try{localStorage.setItem('blank1_prev',JSON.stringify(S))}catch(e){}S=d;save();closeS();render()}
+const numS=v=>{const s=String(v||'').trim();return(/^[-−–]/.test(s)?-1:1)*num(s)};
+function mRow(x){return `<div class="g3"><input placeholder="شرح" value="${esc(x.name)}"><input inputmode="numeric" value="${x.qty}"><input inputmode="decimal" placeholder="قیمت" value="${x.price}"></div>`}
+function mForm(cid,pre){const c=cid?C(cid):null;pre=pre||{type:'inv',items:[{name:'',qty:1,price:''},{name:'',qty:1,price:''}],note:''};
+sheet(`<h3>ساخت سند دستی${c?' – '+esc(c.name):''}</h3><label>نوع سند<select id="mt"><option value="inv">فاکتور</option><option value="pro">پیش‌فاکتور</option><option value="dbt">صورت‌حساب بدهی</option></select></label>${c?'':`<label>نام مشتری<input id="mn" value="${esc(pre.cn||'')}"></label>`}<p class="mu">هر ردیف: شرح، تعداد، قیمت. برای کسر مبلغ قیمت را با منفی بنویسید.</p><div id="mr">${pre.items.map(x=>mRow(x)).join('')}</div><button class="gh" onclick="$('#mr').insertAdjacentHTML('beforeend',mRow({name:'',qty:1,price:''}))">+ ردیف جدید</button><div class="g2"><label>تخفیف<input id="md" inputmode="numeric" value="${pre.disc||''}"></label><label>پرداخت‌شده (اختیاری)<input id="mp" inputmode="numeric" value="${pre.paid==null?'':pre.paid}"></label></div><label>توضیحات<input id="mo" value="${esc(pre.note||'')}"></label><button class="pri" onclick="mSave('${cid||''}','${pre.id||''}')">ساخت سند</button>`);$('#mt').value=pre.type}
+function mSave(cid,eid){const c=cid?C(cid):null,rows=[...document.querySelectorAll('#mr .g3')].map(r=>{const i=r.querySelectorAll('input');return{name:i[0].value.trim(),qty:num(i[1].value)||1,price:numS(i[2].value)}}).filter(x=>x.name||x.price);
+if(!rows.length)return;const t=$('#mt').value,sub=rows.reduce((a,x)=>a+x.qty*x.price,0),d=Math.min(Math.max(0,sub),num($('#md').value)),pr=$('#mp').value.trim();
+const o={id:uid(),t:Date.now(),type:t,no:({inv:'MF-',pro:'MP-',dbt:'B-'})[t]+(S.nm=(S.nm||1000)+1),cid:c?c.id:'',cn:c?c.name:($('#mn')?$('#mn').value.trim():''),items:rows,disc:d,total:sub-d,paid:pr===''?null:Math.min(sub-d,num(pr)),note:$('#mo').value.trim()};
+if(eid){const ex=(S.md||[]).find(x=>x.id==eid)||(S.pf||[]).find(x=>x.id==eid);Object.assign(ex,{type:o.type,items:o.items,disc:o.disc,total:o.total,paid:o.paid,note:o.note,cn:o.cn,cid:o.cid});save();docView(ex);return}
+(S.md=S.md||[]).unshift(o);save();docView(o)}
+function dbtDoc(id){const c=C(id),ln=(S.loans||[]).filter(m=>m.cid==id).reduce((a,x)=>a+x.amt,0),adj=(c.spent||0)+ln-(c.paid||0)-(c.debt||0),it=[{name:'جمع خرید‌ها',qty:1,price:c.spent||0}];
+if(ln)it.push({name:'قرض نقدی',qty:1,price:ln});it.push({name:'جمع پرداخت‌ها',qty:1,price:-(c.paid||0)});if(adj)it.push({name:'تخفیف و تعدیل',qty:1,price:-adj});
+mForm(id,{type:'dbt',items:it,note:'مانده بدهی تا تاریخ '+new Date().toLocaleDateString('fa-IR')})}
+function mdList(){return (S.md||[]).length?`<h4>اسناد دستی اخیر</h4>`+S.md.slice(0,10).map(o=>`<div class="r" onclick="docView(S.md.find(x=>x.id=='${o.id}'))"><span>${esc(o.no)} – ${esc(o.cn||'—')}</span><b>${fa(o.total)}</b></div>`).join(''):''}
+let dtp='all',dsq='';
+function allDocs(){return [...S.sales.map(s=>({...sDoc(s),k:'s'})),...(S.pf||[]).map(o=>({...o,k:'p'})),...(S.md||[]).map(o=>({...o,k:'m'}))].sort((a,b)=>b.t-a.t)}
+function docOpen(k,id){if(k=='s')inv(id);else docView((k=='p'?S.pf:S.md).find(x=>x.id==id))}
+function vDocs(){return `<button class="pri" onclick="mForm('')">ساخت سند دستی جدید</button><input id="dsq" placeholder="جستجوی نام مشتری یا شماره" oninput="dsq=this.value;drawD()" value="${esc(dsq)}" style="margin-top:8px"><div class="chips" style="flex-wrap:wrap">${[['all','همه'],['inv','فاکتور'],['pro','پیش‌فاکتور'],['dbt','صورت‌حساب بدهی']].map(([k,l])=>`<button class="${dtp==k?'on':''}" onclick="dtp='${k}';render()">${l}</button>`).join('')}</div><div id="dl">${dList()}</div>`}
+function drawD(){$('#dl').innerHTML=dList()}
+function dList(){const n=s=>String(s||'').replace(/ي/g,'ی').replace(/ك/g,'ک').toLowerCase(),lb=d=>d.type=='pro'?'پیش‌فاکتور':d.type=='dbt'?'صورت‌حساب بدهی':d.k=='s'?'فاکتور فروش':'فاکتور دستی',L=allDocs().filter(d=>(dtp=='all'||d.type==dtp)&&n((d.cn||'')+' '+d.no).includes(n(dsq).trim()));
+return L.slice(0,60).map(d=>`<div class="r" onclick="docOpen('${d.k}','${d.sid||d.id}')"><div class="g"><b>${lb(d)} ${esc(d.no)}</b><small>${esc(d.cn||'بدون مشتری')} – ${new Date(d.t).toLocaleDateString('fa-IR')}</small></div><b>${fa(d.total)}</b></div>`).join('')||'<p class="mu">سندی پیدا نشد.</p>'}
+function delAsk(){const sale=!!CD.sid;$('#dx').innerHTML=`<div class="r" style="flex-direction:column;align-items:stretch"><b>این سند حذف شود؟</b>${sale?`<button class="pri" onclick="delDoc(1)">حذف و برگرداندن اثر (موجودی، حساب مشتری)</button><button class="gh" onclick="delDoc(0)">فقط حذف سند، بدون تغییر حساب‌ها</button>`:`<button class="pri" onclick="delDoc(0)">بله، حذف شود</button>`}<button class="gh" onclick="$('#dx').innerHTML=''">انصراف</button></div>`}
+function delDoc(rev){const d=CD;
+if(d.sid){const s=S.sales.find(x=>x.id==d.sid);if(s){if(rev){s.items.forEach(x=>{const p=P(x.id);if(p)p.stock+=x.qty});const c=C(s.cid)||(s.cn?S.customers.find(z=>z.name==s.cn):null);if(c){const pd=s.paid==null?s.total:s.paid;c.spent=Math.max(0,(c.spent||0)-s.total);c.paid=Math.max(0,(c.paid||0)-pd);c.debt=Math.max(0,(c.debt||0)-(s.total-pd))}}S.sales=S.sales.filter(x=>x.id!=d.sid)}}
+else if((S.pf||[]).some(x=>x.id==d.id))S.pf=S.pf.filter(x=>x.id!=d.id);else S.md=(S.md||[]).filter(x=>x.id!=d.id);
+save();closeS();render()}
+let ED;function sCust(s){return C(s.cid)||(s.cn?S.customers.find(z=>z.name==s.cn):null)}
+function docEdit(){const d=CD;if(d.sid)return sEdit(d.sid);mForm(d.cid||'',{id:d.id,type:d.type,items:d.items.map(x=>({...x})),note:d.note||'',disc:d.disc,paid:d.paid,cn:d.cn})}
+function sEdit(id){const s=S.sales.find(x=>x.id==id);ED={id,no:s.no||'',hasC:!!sCust(s),items:s.items.map(x=>({...x})),disc:s.disc||0,paid:s.paid==null?s.total:s.paid};edR()}
+function edRead(){document.querySelectorAll('#er .g3').forEach((r,i)=>{const n=r.querySelectorAll('input');ED.items[i].qty=num(n[0].value);ED.items[i].price=num(n[1].value)});ED.disc=num($('#ed').value);if($('#ep'))ED.paid=$('#ep').value.trim()===''?null:num($('#ep').value)}
+function edAdd(pid){edRead();if(!pid)return;const ex=ED.items.find(x=>x.id==pid);if(ex)ex.qty++;else{const p=P(pid);ED.items.push({id:pid,name:p.name,qty:1,price:p.sell,cost:p.buy})}edR()}
+function edDel(i){edRead();ED.items.splice(i,1);edR()}
+function edR(){sheet(`<h3>ویرایش فاکتور ${esc(ED.no)}</h3><div id="er">${ED.items.map((x,i)=>`<div><b>${esc(x.name)}</b><div class="g3" style="grid-template-columns:1fr 1.6fr auto"><input inputmode="numeric" placeholder="تعداد" value="${x.qty}"><input inputmode="numeric" placeholder="قیمت" value="${x.price}"><button class="gh" style="width:auto;margin:0" onclick="edDel(${i})">حذف</button></div></div>`).join('')}</div><label>افزودن کالا<select onchange="edAdd(this.value)"><option value="">انتخاب کالا…</option>${S.products.map(p=>`<option value="${p.id}">${esc(p.name)} (موجودی ${fa(p.stock)})</option>`).join('')}</select></label><div class="g2"><label>تخفیف<input id="ed" inputmode="numeric" value="${ED.disc}"></label>${ED.hasC?`<label>پرداخت‌شده<input id="ep" inputmode="numeric" value="${ED.paid==null?'':ED.paid}"></label>`:''}</div><p class="w" id="em"></p><button class="pri" onclick="edSave()">ذخیره تغییرات</button><button class="gh" onclick="inv('${ED.id}')">انصراف</button>`)}
+function edSave(){edRead();const s=S.sales.find(x=>x.id==ED.id),it=ED.items.filter(x=>x.qty>0);
+if(!it.length){$('#em').textContent='حداقل یک کالا لازم است؛ برای حذف کامل فاکتور از «حذف این سند» استفاده کنید.';return}
+const qa=(a,id)=>a.filter(o=>o.id==id).reduce((t,o)=>t+o.qty,0);
+for(const x of it){const p=P(x.id);if(p&&qa(it,x.id)>p.stock+qa(s.items,x.id)){$('#em').textContent='موجودی «'+x.name+'» کافی نیست (حداکثر '+fa(p.stock+qa(s.items,x.id))+')';return}}
+const c=sCust(s),oT=s.total,oP=s.paid==null?s.total:s.paid,sub=it.reduce((a,x)=>a+x.qty*x.price,0),d=Math.min(sub,ED.disc),total=sub-d,pd=c&&ED.paid!=null?Math.min(total,ED.paid):total;
+s.items.forEach(x=>{const p=P(x.id);if(p)p.stock+=x.qty});it.forEach(x=>{const p=P(x.id);if(p)p.stock-=x.qty});
+if(c){c.spent=(c.spent||0)+total-oT;c.paid=(c.paid||0)+pd-oP;c.debt=Math.max(0,(c.debt||0)+(total-pd)-(oT-oP))}
+Object.assign(s,{items:it,disc:d,total,paid:pd});save();render();inv(s.id)}
+function hist(id){const c=C(id),L=[...S.sales.filter(s=>s.cid?s.cid==id:s.cn==c.name).map(s=>({id:s.id,t:s.t,tx:s.items.map(x=>esc(x.name)+' × '+fa(x.qty)).join('، '),a:s.total,d:s.total-(s.paid==null?s.total:s.paid)})),...(S.mb||[]).filter(m=>m.cid==id).map(m=>({t:m.t,tx:esc(m.note||'خرید ثبت‌دستی'),a:m.amt,d:m.amt-m.pd})),...(S.loans||[]).filter(m=>m.cid==id).map(m=>({t:m.t,tx:esc(m.note||'قرض نقدی'),a:m.amt,d:m.amt})),...(S.md||[]).filter(m=>m.cid==id).map(m=>({md:m.id,t:m.t,tx:esc('سند: '+({inv:'فاکتور دستی',pro:'پیش‌فاکتور',dbt:'صورت‌حساب بدهی'})[m.type]+' '+m.no),a:m.total,d:0}))].sort((a,b)=>b.t-a.t);
+return `<h4>تاریخچه خرید</h4>`+(L.map(x=>`<div class="r"${x.id?` onclick="inv('${x.id}')"`:x.md?` onclick="docView(S.md.find(z=>z.id=='${x.md}'))"`:''}><div class="g"><b>${x.tx}</b><small>${new Date(x.t).toLocaleDateString('fa-IR')}${x.d>0?' – بدهی '+fa(x.d):''}</small></div><b>${fa(x.a)}</b></div>`).join('')||'<p class="mu">هنوز خریدی در اپ ثبت نشده است. خریدهای قبلی اکسل جزئیات کالا نداشتند.</p>')}
+function buyForm(id){const c=C(id);sheet(`<h3>خرید جدید – ${esc(c.name)}</h3><p class="mu">خرید قبلی: ${fa(c.spent)} تومان</p><div class="g2"><label>مبلغ خرید<input id="f1" inputmode="numeric"></label><label>مبلغ پرداختی<input id="f2" inputmode="numeric" placeholder="خالی = کامل"></label></div><label>شرح خرید – چه کالایی خرید (اختیاری)<input id="f3"></label><button class="pri" onclick="buySave('${id}')">ثبت خرید</button>`)}
+function buySave(id){const c=C(id),a=num($('#f1').value);if(!a)return;const p=$('#f2').value.trim()===''?a:Math.min(a,num($('#f2').value));c.spent+=a;c.paid=(c.paid||0)+p;c.debt=(c.debt||0)+a-p;(S.mb=S.mb||[]).push({t:Date.now(),cid:id,amt:a,pd:p,note:$('#f3').value.trim()});if(p)(S.pays=S.pays||[]).push({t:Date.now(),cid:id,amt:p});save();closeS();render()}
+function payForm(id){const c=C(id);sheet(`<h3>پرداخت بدهی – ${esc(c.name)}</h3><p class="mu">بدهی فعلی: ${fa(c.debt)} تومان</p><label>مبلغ دریافتی<input id="f1" inputmode="numeric" value="${c.debt}"></label><button class="pri" onclick="paySave('${id}')">ثبت پرداخت</button>`)}
+function paySave(id){const c=C(id),a=Math.min(c.debt,num($('#f1').value));if(!a)return;c.debt-=a;c.paid=(c.paid||0)+a;(S.pays=S.pays||[]).push({t:Date.now(),cid:id,amt:a});save();closeS();render()}
+function eForm(){sheet(`<h3>ثبت هزینه</h3><label>مبلغ<input id="f1" inputmode="numeric"></label><label>نوع<select id="f2"><option value="inst">هزینه (قسط)</option><option value="buy">خرید جدید</option><option value="draw">برداشت نقدی</option></select></label><button class="pri" onclick="eSave()">ثبت</button>`)}
+function eSave(){const a=num($('#f1').value);if(!a)return;(S.exp=S.exp||[]).push({t:Date.now(),amt:a,type:$('#f2').value});save();closeS();render()}
+function cashT(){const k=S.cash0,X=t=>(S.exp||[]).filter(x=>x.type==t).reduce((a,x)=>a+x.amt,0),inn=k.in+S.sales.reduce((a,s)=>a+(s.paid==null?s.total:s.paid),0)+(S.pays||[]).reduce((a,x)=>a+x.amt,0),inst=k.inst+X('inst'),buy=k.buy+X('buy'),dr=X('draw'),ln=(S.loans||[]).reduce((a,x)=>a+x.amt,0),db=S.customers.reduce((a,c)=>a+(c.debt||0),0);
+return `<h4>صندوق</h4>${[['جمع دریافتی',inn,''],['هزینه‌ها (اقساط)',inst,''],['خرید جدید',buy,''],['قرض نقدی به مشتریان',ln,''],['برداشت نقدی',dr,''],['مانده صندوق',inn-inst-buy-ln-dr,''],['بدهی مشتریان',db,'w']].map(([l,v,c])=>`<div class="r"><span>${l}</span><b class="${c}">${fa(v)}</b></div>`).join('')}<button class="gh" onclick="eForm()">ثبت هزینه یا خرید</button>`}
+function cDel(id){S.customers=S.customers.filter(x=>x.id!=id);save();closeS();render()}
+render();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script></body></html>
